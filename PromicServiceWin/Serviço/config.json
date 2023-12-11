@@ -1,0 +1,10 @@
+{
+  "ipDB": "local",
+  "porta": 3050,
+  "Ambiente": "Dev",
+  "ApiURL": "https://systemapi-dev.promicnet.com.br",
+  "CognitoURL": "https://dev-riole-domain.auth.sa-east-1.amazoncognito.com",
+  "WebSocketURL": "wss://wsapi-dev.promicnet.com.br",
+  "MasterID": "34kv5pd3p1ilsitpjsk294k81q",
+  "MasterSK": "1e1u6l111o07o37kteqph90t21fofaqnllakam6dggtspej5fbca"
+}

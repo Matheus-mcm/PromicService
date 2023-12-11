@@ -1,0 +1,11 @@
+selecionar a pasta release
+
+
+/// INSTALAR
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\installutil PromicService.exe
+
+
+/// REMOVER
+C:\Windows\Microsoft.NET\Framework64\v4.0.30319\installutil /u PromicService.exe
+
+New-Service -Name "PromicService" -BinaryPathName caminho do serviço

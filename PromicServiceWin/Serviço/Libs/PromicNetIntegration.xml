@@ -1,0 +1,1206 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PromicNetIntegration</name>
+    </assembly>
+    <members>
+        <member name="T:PromicnetIntegration.Events.Event">
+            <summary>
+            Classe de evento genérico
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.Event.Action">
+            <summary>
+            Descrição da ação que está disparando este evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.Event.Connection_id">
+            <summary>
+            ID da Conexão 
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.Event.Session_id">
+            <summary>
+            ID da Reunião que disparando o evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.Event.User_email">
+            <summary>
+            User_email do participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.Event.Agora_id">
+            <summary>
+            ID do Agora do participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.Event.State">
+            <summary>
+            Estado do microfone
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.Event.Status">
+            <summary>
+            Status da sessão
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.Event.Media_type">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.Events.ConectadoEvent">
+            <summary>
+            Evento disparado quando um participante conectar-se à reunião
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.ConectadoEvent.Acao">
+            <summary>
+            Ação que disparou este evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.ConectadoEvent.Id_conexao">
+            <summary>
+            ID da Conexão deste participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.ConectadoEvent.Id_agora">
+            <summary>
+            ID do Agora deste participante
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.ConectadoEvent.#ctor(System.String,System.String)">
+            <summary>
+            Construtor padrão do Evento
+            </summary>
+            <param name="action">Ação que está chamando o evento</param>
+            <param name="connection_id">ID da Conexão</param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.ParticipanteDesconectadoEvent">
+            <summary>
+            Evento disparado quando um participante sair da reunião
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.ParticipanteDesconectadoEvent.Acao">
+            <summary>
+            Ação que disparaou este evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.ParticipanteDesconectadoEvent.Id_agora">
+            <summary>
+            ID do Agora deste participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.ParticipanteDesconectadoEvent.Login">
+            <summary>
+            User_email (User_email) deste participante
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.ParticipanteDesconectadoEvent.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Construtor padrão deste evento
+            </summary>
+            <param name="action">Ação que disparou o evento</param>
+            <param name="id_agora">ID do Agora</param>
+            <param name="login">User_email do participante</param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.KeepAliveEvent">
+            <summary>
+            Evento disparado quando solicitado um KeepAlive
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.KeepAliveEvent.Acao">
+            <summary>
+            Ação que disparou esse evento
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.KeepAliveEvent.#ctor(System.String)">
+            <summary>
+            Construtor padrão deste evento
+            </summary>
+            <param name="action">Ação que disparou este evento</param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.VideoAtivadoEvent">
+            <summary>
+            Evento disparado quando for ativado o vídeo de um participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.VideoAtivadoEvent.Acao">
+            <summary>
+            Ação que disparou esse evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.VideoAtivadoEvent.Id_agora">
+            <summary>
+            ID do Agora deste participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.VideoAtivadoEvent.Login">
+            <summary>
+            User_email (User_email) deste participante
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.VideoAtivadoEvent.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Construtor padrão deste evento
+            </summary>
+            <param name="action">Ação que disparou este evento</param>
+            <param name="agora_id">ID do Agora</param>
+            <param name="login">User_email do participante</param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.MicrofoneAtivadoEvent">
+            <summary>
+            Evento disparado quando o microfone de um participante for ativado 
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.MicrofoneAtivadoEvent.Acao">
+            <summary>
+            Ação que disparou este evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.MicrofoneAtivadoEvent.Id_agora">
+            <summary>
+            Id do Agora deste participante
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.MicrofoneAtivadoEvent.#ctor(System.String,System.String)">
+            <summary>
+            Construtor pardão deste evento
+            </summary>
+            <param name="action">Ação que disparou esse evento</param>
+            <param name="agora_id">ID do Agora</param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.MicrofoneDesativadoEvent">
+            <summary>
+            Evento disparado quando o microfone de um participante for desativado
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.MicrofoneDesativadoEvent.Acao">
+            <summary>
+            Ação que disparou este evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.MicrofoneDesativadoEvent.Id_agora">
+            <summary>
+            ID do Agora deste participante
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.MicrofoneDesativadoEvent.#ctor(System.String,System.String)">
+            <summary>
+            Construtor padrão deste evento
+            </summary>
+            <param name="action">Ação que disparou esse evento</param>
+            <param name="agora_id">ID do Agora</param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.PedidoPalavraEvent">
+            <summary>
+            Evento disparado quando um participante solicitar a palavra
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.PedidoPalavraEvent.Acao">
+            <summary>
+            Ação que disparou este evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.PedidoPalavraEvent.Id_promic">
+            <summary>
+            ID da Reunião no Promicnet
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.PedidoPalavraEvent.Login">
+            <summary>
+            User_email (User_email) do participante
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.PedidoPalavraEvent.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Construtor padrão deste evento
+            </summary>
+            <param name="action">Ação que disparou esse evento</param>
+            <param name="id_promicnet">ID da Reunião no Promicnet</param>
+            <param name="login">User_email do participante</param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.PermissaoFalarRecusadaEvent">
+            <summary>
+            Evento disparado quando um pedido de palavra for recusado pelo Promic
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.PermissaoFalarRecusadaEvent.Acao">
+            <summary>
+            Ação que disparou esse evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.PermissaoFalarRecusadaEvent.Id_promicnet">
+            <summary>
+            ID da Reunião no Promicnet
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.PermissaoFalarRecusadaEvent.Login">
+            <summary>
+            User_email (email) do participante
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.PermissaoFalarRecusadaEvent.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Construtor padrão deste evento
+            </summary>
+            <param name="action">Ação que disparou este evento</param>
+            <param name="id_promicnet">ID da Reunião no Promicnet</param>
+            <param name="login">EMail do participante</param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.SitaucaoMicrofoneAlteradaEvent">
+            <summary>
+            Evento disparado quando a situação de um microfone for alterada
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.SitaucaoMicrofoneAlteradaEvent.Action">
+            <summary>
+            Ação que disparou este evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.SitaucaoMicrofoneAlteradaEvent.State">
+            <summary>
+            Situação do microfone
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.SitaucaoMicrofoneAlteradaEvent.#ctor(System.String,System.String)">
+            <summary>
+            Construtor padrão deste evento
+            </summary>
+            <param name="action">Ação que disparou este evento</param>
+            <param name="state">Situação do microfone</param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.PeakDetectEvent">
+            <summary>
+            Evento disparado ao realizar um PeakDestect 
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.PeakDetectEvent.Acao">
+            <summary>
+            Ação que disparou este evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.PeakDetectEvent.Id_promicnet">
+            <summary>
+            ID da Reunião no Promicnet
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.PeakDetectEvent.Login">
+            <summary>
+            User_email (email) do participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.PeakDetectEvent.Situacao">
+            <summary>
+            Situação do microfone
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.PeakDetectEvent.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Construtor padrão deste evento
+            </summary>
+            <param name="action">Ação que disparou esse evento</param>
+            <param name="session_id">ID da Reunião no Promicnet</param>
+            <param name="login">Emaild o participante</param>
+            <param name="state">situação do microfone</param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.SituacaoReuniaoAlteradaEvent">
+            <summary>
+            Evento disparado quando a situação de uma reunião for alterada
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.SituacaoReuniaoAlteradaEvent.Acao">
+            <summary>
+            Ação que disparou este evento
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.SituacaoReuniaoAlteradaEvent.#ctor(System.String)">
+            <summary>
+            Contrutor padrão deste evento
+            </summary>
+            <param name="action"></param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.ParticipanteIngressouEvent">
+            <summary>
+            Evento disparado quando um participante ingressar na reunião
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.ParticipanteIngressouEvent.Acao">
+            <summary>
+            Ação que disparou este evento
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.ParticipanteIngressouEvent.Session_id">
+            <summary>
+            ID da Reunião no Promicnet
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.ParticipanteIngressouEvent.Login">
+            <summary>
+            User_email (email) do participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.ParticipanteIngressouEvent.Id_agora">
+            <summary>
+             ID do Agora do Participante
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.ParticipanteIngressouEvent.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>
+            Construtor padrão deste evento
+            </summary>
+            <param name="action">Ação que disparou este evento</param>
+            <param name="session_id">ID da Reunião no Promicnet</param>
+            <param name="user_email">Email do participante</param>
+            <param name="id_agora">ID do Agora</param>
+        </member>
+        <member name="T:PromicnetIntegration.Events.SituacaoMidiaEvent">
+            <summary>
+            Evento disparado quando a situação de um dos dispositivos de mídia, microfone ou câmera, tiver a situação aleterada
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.SituacaoMidiaEvent.Acao">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.SituacaoMidiaEvent.Login">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.SituacaoMidiaEvent.Media">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.SituacaoMidiaEvent.Situacao">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Events.SituacaoMidiaEvent.Session_id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Events.SituacaoMidiaEvent.#ctor(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="action"></param>
+            <param name="login"></param>
+            <param name="media"></param>
+            <param name="situacao"></param>
+            <param name="session_id"></param>
+        </member>
+        <member name="T:PromicnetIntegration.Api">
+            <summary>Classe com todos os métodos para a API do Promicnet</summary>
+        </member>
+        <member name="F:PromicnetIntegration.Api.client">
+            <summary>Classe padrão para fazer as requisições para o Promicnet.</summary>
+        </member>
+        <member name="F:PromicnetIntegration.Api.utils">
+            <summary>Classe com funções auxiliares.</summary>
+        </member>
+        <member name="F:PromicnetIntegration.Api.map">
+            <summary>Classe para mapear os objetos para o Promic.</summary>
+        </member>
+        <member name="F:PromicnetIntegration.Api.serializerOptions">
+            <summary>Opções padrão para deserializar os objetos retornado pelo Promicnet.</summary>
+        </member>
+        <member name="M:PromicnetIntegration.Api.#ctor(System.String)">
+            <summary>Construtor da classe para integração com a API do Promicnet</summary>
+            <param name="url">URL do ambiente.</param>
+        </member>
+        <member name="E:PromicnetIntegration.Api.LogEvent">
+            <summary>Evento de disparo de mensagens de execução do código.</summary>
+        </member>
+        <member name="M:PromicnetIntegration.Api.Log(System.String,System.String,System.String)">
+            <summary>Responsável por disparar o evento de mensagem.</summary>
+            <param name="function">Nome da função que está disparando o evento.</param>
+            <param name="message">Mensagem a ser disparada.</param>
+            <param name="status">Mensagem a ser disparada.</param>
+        </member>
+        <member name="M:PromicnetIntegration.Api.ObterTokenPromic(PromicnetIntegration.Types.Token)">
+            <summary>Responsável por gerar um Token de autenticação para acessar a API do PromicNet.</summary>
+            <param name="token">Objeto do tipo Token contendo os parâmetros necessários para gerar o token.</param>
+            <exception cref="T:System.ArgumentNullException">Uma das propriedades do Token(Client_id, client_secret ou url) está vazia.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.CadastrarDelegado(PromicnetIntegration.Types.Token,System.String,System.String,System.String)">
+            <summary>Responsável por cadastrar um novo usuário em um órgão.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="email">User_email do usuário.</param>
+            <param name="orgao">SK do órgão.</param>
+            <param name="full_name">Nome do usuário.</param>
+            <returns>Retorna um objeto do tipo `Types.Result` com o objeto do tipo `Types.DELEGADO` contendo todas as informações dentro da propriedade `Types.Result.Item`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando uma, ou mais, das propriedades do usuário (User_email, órgão ou nome) está incorreta.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.ObterDelegado(PromicnetIntegration.Types.Token,System.String)">
+            <summary>Responsável por buscar as informações de um usuário através do login do usuário (User_email).</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="email">User_email do usuário.</param>
+            <returns>Retorna um objeto do tipo `Types.Result` com um objeto do tipo `Types.DELEGADO` contendo todas as informações dentro da propriedade `Types.Result.Item`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o User_email do usuário está inválido.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.ObterListaDelegado(PromicnetIntegration.Types.Token,System.String)">
+            <summary>Responsável por trazer uma lista com todos os usuários de um órgão.</summary>
+            <param name="token">Token de Autenticação.</param>
+            <param name="orgao">SK do órgão.</param>
+            <returns>Retorna uma lista com todos os usuários de um órgão.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o SK do órgão está vazio.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.AtualizaDelegado(PromicnetIntegration.Types.Token,System.String,System.String,System.String,System.String)">
+            <summary>Atualiza as informações de um usuário.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="email">User_email do usuário.</param>
+            <param name="new_email">User_email que deverá ser alterado usuário.</param>
+            <param name="full_name">Novo nome do usuário.</param>
+            <param name="orgao">Objeto com as informações do usuário.</param>
+            <returns>Retorna um objeto do tipo Types.Result com o objeto do tipo Types.DELEGADO.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando uma, ou mais, das propriedades do usuário (User_email, User_email novo, órgão ou nome) está incorreta.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.DeletaDelegado(PromicnetIntegration.Types.Token,System.String)">
+            <summary>Deleta o usuário a partir do seu User_email.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="email">User_email do usuário.</param>
+            <returns>Retorna um objeto do tipo Types.Types.Result com o objeto do tipo Types.DELEGADO.</returns>>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o User_email do usuário está incorreto.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.BuscaOrgao(PromicnetIntegration.Types.Token,System.String)">
+            <summary>Obtém as informações de um órgão a partir do SK dele.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="orgao">SK do órgão.</param>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o SK do órgão está vazio.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.BuscaListaOrgao(PromicnetIntegration.Types.Token)">
+            <summary>Obtém uma lista de todos os órgãos.</summary>
+            <param name="token">Token de autenticação.</param>
+            <returns>Retorna um objeto do tipo Types.Result com um list de objetos do tipo Orgao.</returns>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.CadastrarOrgao(PromicnetIntegration.Types.Token,System.String,System.Int32)">
+            <summary>Registra um novo órgão no Promicnet.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="nome_orgao">Nome do órgão.</param>
+            <param name="max_participants">Nome do órgão.</param>
+            <exception cref="T:System.ArgumentException">Nome do órgão está vazia.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.AtualizarOrgao(PromicnetIntegration.Types.Token,System.String,System.String,System.Int32)">
+            <summary>Atualiza os dados do órgão.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="name">Nome do órgão.</param>
+            <param name="orgao">SK do órgão.</param>
+            <param name="max_participants">Número de participantes remotos.</param>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o Nome ou o SK do órgão está incorreto.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.DeletaOrgao(PromicnetIntegration.Types.Token,System.String)">
+            <summary>Responsável por remover um órgão.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="orgao">SK do órgão.</param>
+            <returns>Retorna um objeto do tipo `Types.Result` com o resultado da requisição na propriedade `Types.Result.Success`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o SK do órgão está vazio.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.CadastrarReuniao(PromicnetIntegration.Types.Token,System.String,System.String,System.DateTime)">
+            <summary>Cria uma nova sessão para um órgão a partir do SK do órgão.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="orgao">SK do órgão.</param>
+            <param name="sessionName">Nome da sessão.</param>
+            <param name="sessionDate">Data para qual a reunião será agendada.</param>
+            <returns>Retorna um objeto do tipo `Types.Result` com um objeto do tipo `Reuniao` contendo as informações da sessão na propriedade `Types.Result.Item`.</returns>
+            <exception cref="T:System.ArgumentException">Excelçao lançada quando um dos parâmetros orgao ou sessionName estão incorretos.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.ObterListaReuniao(PromicnetIntegration.Types.Token,System.String)">
+            <summary>Obtém a lista de sessão de um órgão a partir do seu SK.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="orgao">SK do órgão.</param>
+            <returns>Retorna um objeto do tipo `Types.Result` com uma lista do tipo `Reuniao` contendo todas as sessões na propriedade `Types.Result.Items`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o SK do órgão está incorreto.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.AdicionarParticipanteReuniao(PromicnetIntegration.Types.Token,System.String,System.String)">
+            <summary>Adiciona um participante em uma sessão a partir do seu SK e do User_email do usuário.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <param name="email">User_email do participante.</param>
+            <returns>Retorna um objeto do tipo `Types.Result`, podendo validar o resultado pela propriedade `Types.Result.Success`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o SK da sessão ou o User_email do participante está incorreto.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.AtualizaSituacaoReuniao(PromicnetIntegration.Types.Token,System.String,System.String,System.String)">
+            <summary>Atualiza o status de uma sessão a partir do seu SK.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <param name="orgao">SK do órgão.</param>
+            <param name="status">Status a ser alterado.</param>
+            <returns>Retorna um objeto do tipo `Types.Result`, podendo validar o resultado pela propriedade `Types.Result.Success`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada caso o SK da sessão ou o status esteja vazio.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada caso ocorra um erro inesperado.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.AtualizaInfoReuniao(PromicnetIntegration.Types.Token,System.String,System.String,System.String,System.DateTime)">
+            <summary>Atualiza o nome e/ou a data inicial de uma sessão a partir do SK da sessão e do SK do órgão.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="orgao">SK do órgão.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <param name="session_name">Nome da sessão.</param>
+            <param name="initial_date">Data de início da sessão.</param>
+            <returns>Retorna um objeto do tipo `Types.Result`, podendo validar o resultado pela propriedade `Types.Result.Success`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada caso o SK do órgão, SK da sessão ou o nome da sessão esteja incorreto.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada caso ocorra um erro inesperado.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.ObterReuniao(PromicnetIntegration.Types.Token,System.String,System.String)">
+            <summary>Obtém os detalhes de uma sessão a partir do seu SK.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <param name="orgao">SK do orgão.</param>
+            <returns>Retorna um objeto do tipo `Types.Result` com um objeto do tipo `Reuniao` obtendo as informações da sessão na propriedade `Types.Result.Item`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada caso o SK da sessão ou do órgão está incorreto.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada caso ocorra um erro inesperado.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.RemoverParticipanteReuniao(PromicnetIntegration.Types.Token,System.String,System.String)">
+            <summary>Remove um participante de sua sessão a partir do seu User_email e o SK da sessão.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <param name="email">User_email do participante.</param>        
+            <returns>Retorna um objeto do tipo `Types.Result`, podendo validar o resultado pela propriedade `Types.Result.Success`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada caso o SK do client ou o User_email do usuário esteja incorreto.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada caso ocorra um erro inesperado.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.ObterListaParticipanteReuniao(PromicnetIntegration.Types.Token,System.String)">
+            <summary>Busca a lista de participantes de uma sessão a partir de seu SK.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <returns>Retorna um objeto do tipo `Types.Result` com uma lista de objetos do tipo `Participant` contendo todos os participantes na propriedade `Types.Result.Items`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada caso o SK da sessão esteja incorreto.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada caso ocorra um erro inesperado.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.DeletaReuniao(PromicnetIntegration.Types.Token,System.String,System.String)">
+            <summary>Deleta uma sessão a partir de seu SK e do SK do órgão.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <param name="orgao">SK do orgão.</param>       
+            <returns>Retorna um objeto do tipo `Types.Result`, podendo validar o resultado pela propriedade `Types.Result.Success`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o SK do órgão ou da sessão está vazio.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.ObterListaParticipantesAtivos(PromicnetIntegration.Types.Token,System.String)">
+            <summary>
+            
+            </summary>
+            <param name="token"></param>
+            <param name="id_promicnet"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PromicnetIntegration.Api.ObterTokenAgora(PromicnetIntegration.Types.Token,System.String)">
+            <summary>Responsável por obter um Token válido para entrar em uma reunião do Agora.</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <returns>Retorna um objeto do tipo `Types.Result` com um objeto do tipo `AgoraToken` contendo as informações do Token do Agora na propriedade `Types.Result.Item`.</returns>
+            <exception cref="T:System.ArgumentException">Exceção lançada quando o SK da sessão está vazio.</exception>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.Api.IngressarSessaoAgora(PromicnetIntegration.Types.Token,System.String,System.String,System.String)">
+            <summary>Responsável por ingressar na reunião do Agora como usuário "PROMIC".</summary>
+            <param name="token">Token de autenticação.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <param name="agora_id">ID do Agora.</param>
+            <param name="connection_id">ID da conexão WebSocket.</param>
+            <returns>Está função não tem um retorno. Será retornada via WebSocket no evento `ParticipanteIngressouEvent`.</returns>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="T:PromicnetIntegration.WebSockert">
+            <summary>
+            Classe com os métodos de comunicação via WebSocket com o Promicnet
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>Cosntrutor da classe WebSocket.</summary>
+            <param name="wsUrl">URL do WebSocket</param>
+            <param name="token">Token de autenticação (Token.Access_token).</param>
+            <param name="id_promic">SK da sessão.</param>
+            <param name="orgao">SK do órgão.</param>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.LogEvent">
+            <summary>Evento de mensagens de log.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.ConectadoEventHandler">
+            <summary>Evento disparado quando o Promic ingressar na sessão.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.ParticipanteDesconectadoEventHandler">
+            <summary>Evento disparado quando o Promic ingressar na sessão.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.KeepAliveEventHandler">
+            <summary>Evento disparado ao receber um ManterLogado.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.VideoAtivadoEventHandler">
+            <summary>Evento disparado quando um vídeo for ativado.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.MicrofoneAtivadoEventHandler">
+            <summary>Evento disparado quando um áudio for ativado.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.MicrofoneDesativadoEventHandler">
+            <summary>Evento disparado quando um áudio for desativado.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.PedidoPalavraEventHandler">
+            <summary>Evento disparado quando um participante solicitar a palavra.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.PermissaoFalarRecusadaEventHandler">
+            <summary>Evento disparado quando uma palavra solicitada for negada.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.SitaucaoMicrofoneAlteradaEventHandler">
+            <summary>Evento disparado quando o situacao de um microfone for alterado.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.PeakDetectEventHandler">
+            <summary>Evento disparado quando for detectado que um participante, que está com o microfone desativado, começar a falar.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.SituacaoReuniaoAlteradaEventHandler">
+            <summary>Evento disparado quando o status da reunião for alterado.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.ParticipanteIngressouEventHandler">
+            <summary>Evento disparado quando um participante ingressar na sessão.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.EventHandler">
+            <summary>Evento disparado quando uma mensagem não específicada for recebida.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.ErrorEventHandler">
+            <summary>Evento disparado quando uma mensagem de erro for disparada pelo WebSocket.</summary>
+        </member>
+        <member name="E:PromicnetIntegration.WebSockert.SituacaoMidiaEventHandler">
+            <summary>Evento disparado quando a situação de um microfone ou câmera for alterada</summary>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.Log(System.String,System.String,System.String)">
+            <summary>Responsável por disparar o evento de mensagem</summary>
+            <param name="function">Nome da função que está disparando o evento</param>
+            <param name="message">Mensagem a ser disparada</param>
+            <param name="status">Mensagem a ser disparada</param>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.Conectar">
+            <summary>Estabelece uma conexão com o WebSocket do Promicnet.</summary>
+            <returns>Retorna um objeto Types.Result contendo as informações da conexão com o servidor dentro do parametro `Types.Result.Item`.</returns>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.Desconectar">
+            <summary>Encerra a conexão com o WebSocket do Promicnet.</summary>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.ManterLogado">
+            <summary>Reseta o tempo da conexão com o WebSocket do Promicnet. <br/>
+            As conexões com o WebSocket duram 10 minutos, para que você não seja desconectado automaticamente, poderá chamar este método a qualquer momento para reiniciar a contagem deste tempo.</summary>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.AtivarMicrofone(System.String,System.String)">
+            <summary>Ativa o microfone de um participante da sessão.</summary>
+            <param name="email">User_email do participante.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.ChavearVideo(System.String,System.String)">
+            <summary>Ativa o vídeo de um participante da sessão.</summary>
+            <param name="email">User_email do participante.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.DesativarCamera(System.String,System.String)">
+             <summary>Ativa o vídeo de um participante da sessão.</summary>
+             <param name="email">User_email do participante.</param>
+             <param name="id_promic">SK da sessão.</param>
+             <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+            
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.AtivarCamera(System.String,System.String)">
+            <summary>
+            Método para chaver no vídeo de um participante
+            </summary>
+            <param name="email"></param>
+            <param name="id_promicnet"></param>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.AtivarPreview(System.String,System.String)">
+            <summary>
+            Método para ativar o preview do vídeo de um participante
+            </summary>
+            <param name="email"></param>
+            <param name="id_promicnet"></param>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.DesativarPreview(System.String,System.String)">
+            <summary>
+            Método para desativar o preview do vídeo de um participante
+            </summary>
+            <param name="email"></param>
+            <param name="id_promicnet"></param>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.DesativarMicrofone(System.String,System.String)">
+            <summary>Desativa o microfone de um pariticpante da sessão.</summary>
+            <param name="email">User_email do participante.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.SolicitarPalavra(System.String,System.String)">
+            <summary>Solicita a palavra para um participante.</summary>
+            <param name="email">User_email do participante.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.RecusarPedidoPalavra(System.String,System.String)">
+            <summary>Recusa a solicitação de palavra de um participante.</summary>
+            <param name="email">User_email do participante.</param>
+            <param name="id_promic">SK da sessão.</param>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.AlterarEstadoMicrofone(System.String,System.String,System.String)">
+            <summary>Altera o situacao do microfone de um participante.</summary>
+            <param name="email">User_email do participante</param>
+            <param name="id_promic">SK da sessão</param>
+            <param name="state">Estado do microfone</param>
+            <exception cref="T:System.Exception">Exceção genérica lançada quando ocorrer um erro desconhecido.</exception>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.OnOpen(System.Object,System.EventArgs)">
+            <summary>Callback de retorno ao se conectar no WebSocket.</summary>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.OnError(System.Object,WebSocketSharp.ErrorEventArgs)">
+            <summary>Callback de retorno ao ocorrer um erro no WebScoket.</summary>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.OnClose(System.Object,WebSocketSharp.CloseEventArgs)">
+            <summary>Callback de retorno ao fechar uma conexão com o WebSocket.</summary>
+        </member>
+        <member name="M:PromicnetIntegration.WebSockert.OnMessage(System.Object,WebSocketSharp.MessageEventArgs)">
+            <summary>Callback de retorno com a trativa de todas as mensagens do WebSocket.</summary>
+        </member>
+        <member name="T:PromicnetIntegration.Types.LogData">
+            <summary>
+            Classe de log
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.LogData.Time">
+            <summary>Data e hora em que a mensagem foi gerada.</summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.LogData.Class">
+            <summary>Identificador de qual classe está sendo enviada a mensagem. Atualmente podendo ser: API ou WebSocket.</summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.LogData.Status">
+            <summary>Identificador de qual classe está sendo enviada a mensagem. Atualmente podendo ser: API ou WebSocket.</summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.LogData.Function">
+            <summary>Nome da função que disparou o evento.</summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.LogData.Message">
+            <summary>A mensagem de log a ser exibida.</summary>
+        </member>
+        <member name="M:PromicnetIntegration.Types.LogData.#ctor(System.String,System.String,System.String,System.String)">
+            <summary>Construtor padrão da classe de log.</summary>
+            <param name="status"></param>
+            <param name="class">Classe atual.</param>
+            <param name="function">Função atual.</param>
+            <param name="message">Mensagem a ser exibida.</param>
+        </member>
+        <member name="T:PromicnetIntegration.Types.Token">
+            <summary>
+            Classe responsável por gerenciar o token de autenticação usado na integração com a API da PromicNet.
+            </summary>
+        </member>
+        <member name="F:PromicnetIntegration.Types.Token.client_id">
+            <summary>
+            Orgao ID do cognito
+            </summary>
+        </member>
+        <member name="F:PromicnetIntegration.Types.Token.client_secret">
+            <summary>
+            Secret key do cognito
+            </summary>
+        </member>
+        <member name="F:PromicnetIntegration.Types.Token.url">
+            <summary>
+            url do cognito
+            /// </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.Token.Valid">
+            <summary>
+            Responsável por controlar a validez do token.
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.Token.Access_token">
+            <summary>
+            Token de acesso gerado pela API da PromicNet.
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.Token.Expires_in">
+            <summary>
+            Tempo de vida do token em segundos.
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.Token.Token_type">
+            <summary>
+            Tipo de token gerado.
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.Token.Created_date">
+            <summary>
+            Data e hora de criação do token.
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Types.Token.#ctor">
+            <summary>
+            Cria uma nova instância da classe Token com todos os parâmetros vazios.
+            </summary>
+        </member>
+        <member name="M:PromicnetIntegration.Types.Token.#ctor(System.String,System.String,System.String)">
+            <summary>
+            Cria uma nova instância da classe Token com as credenciais do cliente (client_id e client_secret) e a URL da API da PromicNet.
+            </summary>
+            <param name="url">URL da API da PromicNet.</param>
+            <param name="client_id">Credencial de identificação do cliente.</param>
+            <param name="client_secret">Credencial secreta do cliente.</param>
+        </member>
+        <member name="M:PromicnetIntegration.Types.Token.IsValid(PromicnetIntegration.Types.Token)">
+            <summary>
+            Verifica se o token de acesso gerado ainda é válido com base na data de criação do token e no tempo de vida definido para ele. 
+            Se o token estiver vazio ou expirado, a propriedade "valid" da classe Token será definida como false. 
+            Se o token ainda estiver válido, a propriedade "valid" será definida como true. 
+            Não há retorno deste método, pois ele apenas atualiza a propriedade "valid" da classe Token.
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.Types.ORGAO">
+            <summary>
+            Classe responsável por gerenciar os clientes usados na integração com a API da PromicNet.
+            Orgao = Casa legislativa
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.ORGAO.ID_ORGAO">
+            <summary>
+            Chave primária do Orgao
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.ORGAO.NOME">
+            <summary>
+            Nome do Orgao
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.ORGAO.DELEGADOS">
+            <summary>
+            Lista de todos os usuários do cliente
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.ORGAO.MAX_PARTICIPANTES">
+            <summary>
+            Número de participantes permitidos à ingressas remotamente em uma reunião
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.Types.DELEGADO">
+            <summary>
+            Classe responsável por gerenciar os usuários usados na integração com a API da PromicNet.
+            Usuário = Parlamentar
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.DELEGADO.LOGIN">
+            <summary>User_email do usuário</summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.DELEGADO.ID_ORGAO">
+            <summary>
+            ID do Orgao
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.DELEGADO.NOME">
+            <summary>
+            Nome completo do usuário
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.Types.REUNIAO">
+            <summary>
+            Classe responsável por gerenciar as sessões plenárias na interação com a API da PromicNet.
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.REUNIAO.SITUACAO">
+            <summary>
+            Status da sessão
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.REUNIAO.DESCRICAO">
+            <summary>
+            Nome da sessão
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.REUNIAO.DT_INICIO">
+            <summary>
+            Data de início da sesão
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.REUNIAO.ID_PRMOICNET">
+            <summary>
+            Parte atual da sessão
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.Types.PARTICIPANTE">
+            <summary>
+            Classe responsável por gerenciar os participantes da sessão plenária
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.PARTICIPANTE.LOGIN">
+            <summary>
+            User_email/login do participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.PARTICIPANTE.ID_AGORA">
+            <summary>
+            ID Agora do Participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.PARTICIPANTE.CAMERA">
+            <summary>
+            Status da câmera do participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.PARTICIPANTE.MICROFONE">
+            <summary>
+            Status do microfone do participante
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.Types.AGORA">
+            <summary>
+            Classe responsável por gerenciar o token do Agora
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.AGORA.TOKEN">
+            <summary>
+            Token do Agora
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.AGORA.CANAL">
+            <summary>
+            Canal do Agora
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.AGORA.APPID">
+            <summary>
+            ID fixo do Agora
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.Types.HReturn`1">
+            <summary>
+            Classe de retorno de chamas
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.HReturn`1.SUCESSO">
+            <summary>
+            Status do retorno da chamada
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.HReturn`1.OBJETO">
+            <summary>
+            Objeto retornado
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.Types.HReturn`1.MENSAGEM">
+            <summary>
+            Mensagem de retorno
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.TypesDTO.Result`1">
+            <summary>
+            Classe de retorno dos métodos
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.Result`1.Items">
+            <summary>
+            Dados retornados em lista
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.Result`1.Clients">
+            <summary>
+            Dados retornados em lista
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.Result`1.Item">
+            <summary>
+            Dados retornados
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.Result`1.Sessions">
+            <summary>
+            Dados retornados
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.Result`1.Session_users">
+            <summary>
+            Dados retornados
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.Result`1.Connected_users">
+            <summary>
+            Dados retornados
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.TypesDTO.ClientDTO">
+            <summary>
+            Classe responsável por gerenciar os clientes usados na integração com a API da PromicNet.
+            Orgao = Casa legislativa
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.ClientDTO.Client_id">
+            <summary>
+            Chave primária do Orgao
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.ClientDTO.Client_name">
+            <summary>
+            Nome do Orgao
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.ClientDTO.Client_users">
+            <summary>
+            /Lista de todos os usuários do cliente
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.ClientDTO.Max_session_participants">
+            <summary>
+            Número de participantes remotos
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.TypesDTO.UserDTO">
+            <summary>
+            Classe responsável por gerenciar os usuários usados na integração com a API da PromicNet.
+            Usuário = Parlamentar
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.UserDTO.Email">
+            <summary>User_email do usuário</summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.UserDTO.Client_id">
+            <summary>
+            ID do Orgao
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.UserDTO.Full_name">
+            <summary>
+            Nome completo do usuário
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.TypesDTO.SessionDTO">
+            <summary>
+            Classe responsável por gerenciar as sessões plenárias na interação com a API da PromicNet.
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.SessionDTO.Status">
+            <summary>
+            Status da sessão
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.SessionDTO.Session_name">
+            <summary>
+            Nome da sessão
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.SessionDTO.Initial_date">
+            <summary>
+            Data de início da sesão
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.SessionDTO.Session_id">
+            <summary>
+            Nome da sessão
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.TypesDTO.ParticipantDTO">
+            <summary>
+            Classe responsável por gerenciar os participantes da sessão plenária
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.ParticipantDTO.Agora_id">
+            <summary>
+            User_email/login do participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.ParticipantDTO.User_email">
+            <summary>
+            User_email/login do participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.ParticipantDTO.Mic_state">
+            <summary>
+            Situação do micrfofone do participante
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.ParticipantDTO.Camera_state">
+            <summary>
+            Situação da câmera do participante
+            </summary>
+        </member>
+        <member name="T:PromicnetIntegration.TypesDTO.AgoraTokenDTO">
+            <summary>
+            Classe responsável por gerenciar o token do Agora
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.AgoraTokenDTO.Token">
+            <summary>
+            Token do Agora
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.AgoraTokenDTO.Channel">
+            <summary>
+            Canal do Agora
+            </summary>
+        </member>
+        <member name="P:PromicnetIntegration.TypesDTO.AgoraTokenDTO.Appid">
+            <summary>
+            ID fixo do Agora
+            </summary>
+        </member>
+        <member name="T:Functions.Util">
+            <summary>Conjunto de funções auxiliares</summary>
+        </member>
+        <member name="M:Functions.Util.IsValidEmail(System.String)">
+            <summary>Verifica se a string é um endereço de e-mail válido.</summary>
+            <param name="email">Endereço de e-mail a ser validado.</param>
+            <returns>Caso a string seja um endereço válido retornará True.</returns>
+        </member>
+        <member name="T:Functions.Map">
+            <summary>
+            Classe para mapear as classes do Promicnet para familiarizar com o Promic
+            </summary>
+        </member>
+        <member name="M:Functions.Map.ToDelegado(PromicnetIntegration.TypesDTO.UserDTO)">
+            <summary>
+            Converte os objetos de Usuário, do Promicnet, para Delegado, do Promic.
+            </summary>
+            <param name="user">Objeto usuário do Promicnet.</param>
+            <returns>Retorna as informações de um Delegado.</returns>
+        </member>
+        <member name="M:Functions.Map.ToOrgao(PromicnetIntegration.TypesDTO.ClientDTO)">
+            <summary>
+            Converte os objetos de Cliente, do Promicnet, para Orgao, do Promic.
+            </summary>
+            <param name="client">Objeto de cliente do Promicnet;</param>
+            <returns>Retorna as informações de um Órgão.</returns>
+        </member>
+        <member name="M:Functions.Map.ToReuniao(PromicnetIntegration.TypesDTO.SessionDTO)">
+            <summary>
+            Converte os objetos de Session, do Promicnet, para Reunião, do Promic.
+            </summary>
+            <param name="session">Objeto de sessão do Promicnet.</param>
+            <returns>Retorna as informações de uma Reunião.</returns>
+        </member>
+        <member name="M:Functions.Map.ToParticipante(System.String)">
+            <summary>
+            Converte string para Participante.
+            </summary>
+            <param name="participant">User_email do participante.</param>
+            <returns>Retorna um objeto do tipo Particpante.</returns>
+        </member>
+        <member name="M:Functions.Map.ToParticipante(PromicnetIntegration.TypesDTO.ParticipantDTO)">
+            <summary>
+            Converte um objeto Participant para PARTICIPANTE.
+            </summary>
+            <param name="participant"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

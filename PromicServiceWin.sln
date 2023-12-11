@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromicService", "PromicServiceWin\Serviço\PromicService.csproj", "{47354D09-0069-4BCC-91E0-3A78B70F622D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PromicNetIntegration", "PromicServiceWin\Promicnet\PromicNetIntegration\PromicNetIntegration.csproj", "{C868CEA2-1CDA-4374-A43E-7198ED2C70B4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibPromicDB", "PromicServiceWin\PromicDB\LibPromicDB\LibPromicDB.csproj", "{4BD67FA4-D994-4186-B0E0-B97F464CFECA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3BD272BD-5BD1-4535-AB4B-408441460C0F}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47354D09-0069-4BCC-91E0-3A78B70F622D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47354D09-0069-4BCC-91E0-3A78B70F622D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47354D09-0069-4BCC-91E0-3A78B70F622D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47354D09-0069-4BCC-91E0-3A78B70F622D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C868CEA2-1CDA-4374-A43E-7198ED2C70B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C868CEA2-1CDA-4374-A43E-7198ED2C70B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C868CEA2-1CDA-4374-A43E-7198ED2C70B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C868CEA2-1CDA-4374-A43E-7198ED2C70B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BD67FA4-D994-4186-B0E0-B97F464CFECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BD67FA4-D994-4186-B0E0-B97F464CFECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BD67FA4-D994-4186-B0E0-B97F464CFECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BD67FA4-D994-4186-B0E0-B97F464CFECA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A20B6EF-0D19-464C-9432-5A3D906E580F}
+	EndGlobalSection
+EndGlobal
